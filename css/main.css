@@ -90,7 +90,7 @@ textarea {
 /* Global Styles */
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 body {
@@ -103,6 +103,8 @@ body {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -148,39 +150,33 @@ address {
 
 /* -----------Base Header - Footer Styles-------- */
 
-header,
-footer {
+header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  padding: 15px 0;
   background-color: #202322;
 }
 
-header {
-  padding: 15px 0;
-}
-
 header .content-wrapper {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
+}
+
+header figure {
+  width: 60%;
 }
 
 .header-divider {
-  width: 100%;
+  background: #3a3a3a;
   height: 1px;
+  width: 100%;
   margin: 10px 0 20px 0;
-  background-color: #3a3a3a;
 }
 
 header nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row wrap;
   width: 60%;
   font-size: 1.125em;
   font-weight: 700;
@@ -188,9 +184,9 @@ header nav {
 }
 
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
 header nav ul li {
@@ -198,8 +194,11 @@ header nav ul li {
 }
 
 footer {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
+  background-color: #202322;
 }
 
 footer p {
@@ -208,7 +207,6 @@ footer p {
 
 footer .content-wrapper {
   width: 55%;
-  margin: 50px 0;
 }
 
 footer .contact {
@@ -223,13 +221,14 @@ footer .social-icons {
 
 footer .social-icons p {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 footer .copyright {
   margin: 20px 0;
 }
+
 
 /* -----------Mobile Styles - Homepage-------- */
 
@@ -238,12 +237,12 @@ footer .copyright {
 .hero-area {
   background-image: url("../img/unplugged-retreat.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: center;
   min-height: 500px;
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
 }
 
 .hero-area h1 {
@@ -259,8 +258,8 @@ aside {
   background-color: #527158;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  /* align-items: center;
+  flex-flow: row wrap; */
 }
 
 aside .form {
@@ -295,10 +294,10 @@ input[type="button"] {
   background: url('../img/unplugged-retreat-features.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
 }
 
 .features h2 {
@@ -313,8 +312,13 @@ input[type="button"] {
 .features .features-items {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: row wrap;
+}
+
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
 }
 
 .features p {
@@ -347,16 +351,8 @@ input[type="button"] {
   background-color: #527158;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-}
-
-.contact-section {
-  background-color: #2a423a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  /* align-items: center;
+  flex-flow: row wrap; */
 }
 
 .map figure {
@@ -375,6 +371,14 @@ input[type="button"] {
   left: 0;
 }
 
+.contact-section {
+  background-color: #2a423a;
+  display: flex;
+  justify-content: center;
+  /* align-items: center;
+  flex-flow: row wrap; */
+}
+
 .contact-content p {
   margin: 0;
 }
@@ -386,15 +390,15 @@ input[type="button"] {
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  /* align-items: center;
+  flex-flow: row wrap; */
 }
 
 .faq .content-wrapper {
   margin: 50px 0 0 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: row wrap;
 }
 
@@ -519,7 +523,7 @@ input[type="button"] {
 
   /* Header */
   header {
-    justify-content: space-around;
+    /* justify-content: space-around; */
     padding: 33px 0;
   }
 
@@ -561,7 +565,8 @@ input[type="button"] {
     margin: 50px 0;
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
+    align-content: flex-start;
   }
 
   aside .content-wrapper .form-description,
@@ -578,7 +583,7 @@ input[type="button"] {
 
   .features article {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-flow: column wrap;
     align-items: center;
     flex-basis: 50%;
@@ -612,13 +617,14 @@ input[type="button"] {
 
   footer .content-wrapper {
     width: 65%;
-    margin: 100px 0;
+    /* margin: 100px 0; */
   }
 
   footer .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   footer .contact {
@@ -641,12 +647,16 @@ input[type="button"] {
   .mission-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 20px;
   }
 
   .mission-content p {
     width: 45%;
+  }
+
+  .map figure {
+    padding-bottom: 45.5%;
   }
 
   .contact-section .content-wrapper h2 {
@@ -686,15 +696,16 @@ input[type="button"] {
 
 @media only screen and (min-width: 1200px) {
   /* Desktop styles here */
-
-  header {
-    padding: 15px 0;
-  }
-
+  /* General Styles */
   .content-wrapper {
     max-width: 960px;
   }
 
+  /* Header */
+  header {
+    padding: 15px 0;
+  }
+ 
   h2 {
     font-size: 2.25em;
   }
@@ -723,7 +734,7 @@ input[type="button"] {
 
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-    width: 30%;
+    width: 40%;
   }
 
   .form-description p {
@@ -753,7 +764,10 @@ input[type="button"] {
   }
 
   /* About Page */
-
+  .map figure {
+    padding-bottom: 37.5%;
+  }
+  
   .mission h2,
   .contact-section .content-wrapper h2 {
     width: 95%;
